@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -149,28 +150,28 @@
                 <div class="lists__inner">
                     <div class="lists__bullet">
                         <h5 class="lists__title title-5">Маркированный список:</h5>
-                        <ul class="list">
-                            <li class="list__item">
+                        <ul class="list__bull">
+                            <li class="list__bull-item">
                                 <p>Посетители сайта стали быстрее находить интересующий их товар в каталоге и с легкостью узнавать в каком ближайшем магазине удобнее всего его купить, тем самым повышая продажи в дилерской сети компании.</p>
                             </li>
-                            <li class="list__item">
+                            <li class="list__bull-item">
                                 <p>Разделение информации для разных клиентов и подключение аналитики помогает маркетологу эффективнее разрабатывать рекламные предложения.</p>
                             </li>
-                            <li class="list__item">
+                            <li class="list__bull-item">
                                 <p>Система управления 1С-Битрикс за счет своего удобства экономит время работы с сайтом и позволяет интегрировать его с CRM Битрикс24</p>
                             </li>
                         </ul>
                     </div>
                     <div class="lists__numbered">
                         <h5 class="lists__title title-5">Нумерованный список:</h5>
-                        <ol class="list">
-                            <li class="list__item">
+                        <ol class="list__num">
+                            <li class="list__num-item">
                                 <p>Посетители сайта стали быстрее находить интересующий их товар в каталоге и с легкостью узнавать в каком ближайшем магазине удобнее всего его купить, тем самым повышая продажи в дилерской сети компании.</p>
                             </li>
-                            <li class="list__item">
+                            <li class="list__num-item">
                                 <p>Разделение информации для разных клиентов и подключение аналитики помогает маркетологу эффективнее разрабатывать рекламные предложения.</p>
                             </li>
-                            <li class="list__item">
+                            <li class="list__num-item">
                                 <p>Система управления 1С-Битрикс за счет своего удобства экономит время работы с сайтом и позволяет интегрировать его с CRM Битрикс24</p>
                             </li>
                         </ol>
@@ -181,39 +182,45 @@
 
         <div class="links">
             <div class="container">
-                <div class="link">
-                    <svg>
-                        <use xmlns:link="link"></use>
-                    </svg>
-                    <a href="#">ссылка</a>
-                </div>
-                <div class="visited-link">
-                    <svg>
-                        <use xmlns:link="link"></use>
-                    </svg>
-                    <a class="visited-link" href="#">посещенная ссылка</a>
+                <div class="links__inner">
+                        <a class="links__notvisited" href="#">
+                            <svg class="link__svg">
+                                <use xlink:href="sprite.svg#link"></use>
+                            </svg>
+                            <span>ссылка</span></a>
+                        <a class="links__visited" href="#" visited>
+                            <svg class="link__svg">
+                                <use xlink:href="sprite.svg#link"></use>
+                            </svg>
+                            <span>посещенная ссылка</span></a>
                 </div>
             </div>
         </div>
 
         <div class="marks">
             <div class="container">
-                <mark class="mark-1">Выделенный текст</mark>
-                <mark class="mark-2">Выделенный текст</mark>
-                <mark class="mark-3"><strong>Важный выделенный текст</strong></mark>
+                <div class="marks__inner">
+                    <mark class="marks-1">Выделенный текст</mark>
+                    <mark class="marks-2">Выделенный текст</mark>
+                    <mark class="marks-3"><strong>Важный выделенный текст</strong></mark>
+                </div>
             </div>
         </div>
 
         <div class="buttons">
-            <button class="button-1">обычная кнопка</button>
-            <button class="button-2">обычная кнопка</button>
-            <button class="button-3">маленькая кнопка</button>
-            <button class="button-4">обычная кнопка</button>
-            <button class="button-5">обычная кнопка</button>
-            <button class="button-6">маленькая кнопка</button>
+            <div class="container">
+                <div class="buttons__inner">
+                    <button class="buttons-1">обычная кнопка</button>
+                    <button class="buttons-2">обычная кнопка</button>
+                    <button class="buttons-3">маленькая кнопка</button>
+                    <button class="buttons-4">обычная кнопка</button>
+                    <button class="buttons-5">обычная кнопка</button>
+                    <button class="buttons-6">маленькая кнопка</button>
+                </div>
+            </div>
         </div>
 
-        <section class="list">
+        <!-- <section class="list">
             <div class="container">
                 <div class="list__inner-background">
                     <div class="list__bullet">
@@ -246,56 +253,67 @@
                     </div>
                 </div>
             </div>
-        </section>
-
-        <div class="inputs">
-            <div class="container">
-                <div class="input__item">
-                    <input class="input__item-checkbox" name="checkbox" type="checkbox">
-                    <label for="checkbox">Яндекс.Директ</label>
-                    <input class="input__item-checkbox" name="checkbox" type="checkbox">
-                    <label for="checkbox">Google AdWords</label>         
-                </div>
-                <div class="input__item">
-                    <input class="input__item-radio" name="radio" type="radio">
-                    <label for="radio">Яндекс.Директ</label>
-                    <input class="input__item-radio" name="radio" type="radio">
-                    <label for="radio">Google AdWords</label>
-                </div>
+        </section> -->
+<div class="input">
+    <div class="container">
+        <div class="input__item">
+            <div class="input__item-group">
+                <input class="input__item-checkbox" id="id1" type="checkbox">
+                <label class="input__checkbox-label" for="id1">Яндекс.Директ</label>
+            </div>
+            <div class="input__item-group">
+                <input class="input__item-checkbox" id="id2" type="checkbox">
+                <label class="input__checkbox-label" for="id2">Google AdWords</label>
             </div>
         </div>
+        <div class="input__item">
+            <div class="input__item-group">
+                <input class="input__item-radio" name="radio" id="radio1" type="radio">
+                <label class="input__radio-label" for="radio1">Яндекс.Директ</label>
+            </div>
+            <div class="input__item-group">
+                <input class="input__item-radio" id="radio2" name="radio" type="radio">
+                <label class="input__radio-label" for="radio2">Google AdWords</label>
+            </div>
+        </div>
+    </div>
+</div>
 
         <section class="accordion">
-            <div class="accordion__item">
-                <h5 class="accordion__title">Что такое контекстная реклама?</h5>
-                <p class="accordion__text">Контекстная реклама — это текстовые объявления, которые показываются пользователям по запросам, если эти запросы рекламодатель добавил в настройки рекламной кампании. Объявления показываются пользователю именно в тот момент, когда он сам проявил интерес к товару или услуге и, возможно, готов к покупке. Контекстная реклама бывает поисковой и тематической.</p>
-            </div>
-            <div class="accordion__item">
-                <h5 class="accordion__title">Как выглядит контекстная реклама?</h5>
-                <p class="accordion__text">Контекстная реклама — это текстовые объявления, которые показываются пользователям по запросам, если эти запросы рекламодатель добавил в настройки рекламной кампании. Объявления показываются пользователю именно в тот момент, когда он сам проявил интерес к товару или услуге и, возможно, готов к покупке. Контекстная реклама бывает поисковой и тематической.</p>
-            </div>
-            <div class="accordion__item">
-                <h5 class="accordion__title">Где будут показываться мои объявления?</h5>
-                <p class="accordion__text">Контекстная реклама — это текстовые объявления, которые показываются пользователям по запросам, если эти запросы рекламодатель добавил в настройки рекламной кампании. Объявления показываются пользователю именно в тот момент, когда он сам проявил интерес к товару или услуге и, возможно, готов к покупке. Контекстная реклама бывает поисковой и тематической.</p>
-            </div>
-            <div class="accordion__item">
-                <h5 class="accordion__title">Каким образом высчитывается цена входа в рекламные места, как списывается цена за клик?</h5>
-                <p class="accordion__text">Контекстная реклама — это текстовые объявления, которые показываются пользователям по запросам, если эти запросы рекламодатель добавил в настройки рекламной кампании. Объявления показываются пользователю именно в тот момент, когда он сам проявил интерес к товару или услуге и, возможно, готов к покупке. Контекстная реклама бывает поисковой и тематической.</p>
+            <div class="container">
+                <div class="accordion__item">
+                    <h5 class="accordion__title">Что такое контекстная реклама?</h5>
+                    <p class="accordion__text">Контекстная реклама — это текстовые объявления, которые показываются пользователям по запросам, если эти запросы рекламодатель добавил в настройки рекламной кампании. Объявления показываются пользователю именно в тот момент, когда он сам проявил интерес к товару или услуге и, возможно, готов к покупке. Контекстная реклама бывает поисковой и тематической.</p>
+                </div>
+                <div class="accordion__item">
+                    <h5 class="accordion__title">Как выглядит контекстная реклама?</h5>
+                    <p class="accordion__text">Контекстная реклама — это текстовые объявления, которые показываются пользователям по запросам, если эти запросы рекламодатель добавил в настройки рекламной кампании. Объявления показываются пользователю именно в тот момент, когда он сам проявил интерес к товару или услуге и, возможно, готов к покупке. Контекстная реклама бывает поисковой и тематической.</p>
+                </div>
+                <div class="accordion__item">
+                    <h5 class="accordion__title">Где будут показываться мои объявления?</h5>
+                    <p class="accordion__text">Контекстная реклама — это текстовые объявления, которые показываются пользователям по запросам, если эти запросы рекламодатель добавил в настройки рекламной кампании. Объявления показываются пользователю именно в тот момент, когда он сам проявил интерес к товару или услуге и, возможно, готов к покупке. Контекстная реклама бывает поисковой и тематической.</p>
+                </div>
+                <div class="accordion__item">
+                    <h5 class="accordion__title">Каким образом высчитывается цена входа в рекламные места, как списывается цена за клик?</h5>
+                    <p class="accordion__text">Контекстная реклама — это текстовые объявления, которые показываются пользователям по запросам, если эти запросы рекламодатель добавил в настройки рекламной кампании. Объявления показываются пользователю именно в тот момент, когда он сам проявил интерес к товару или услуге и, возможно, готов к покупке. Контекстная реклама бывает поисковой и тематической.</p>
+                </div>
             </div>
         </section>
+
+        <!-- slider -->
 
         <div class="slider">
             <div class="slider__item">
-                <img src="images/slider-item.jpg" alt="">
+                <img src="images/src/slider-item.jpg" alt="">
             </div>
             <div class="slider__item">
-                <img src="images/slider-item.jpg" alt="">
+                <img src="images/src/slider-item.jpg" alt="">
             </div>
             <div class="slider__item">
-                <img src="images/slider-item.jpg" alt="">
+                <img src="images/src/slider-item.jpg" alt="">
             </div>
             <div class="slider__item">
-                <img src="images/slider-item.jpg" alt="">
+                <img src="images/src/slider-item.jpg" alt="">
             </div>
             <!-- <div class="slider__buttons">
                 button
@@ -303,9 +321,9 @@
         </div>
 
         <div class="container">
-            <p>Одним из самых эффективных способов расширения объявлений являются, конечно же. дополнительные ссылки. Данная функция позволяет добавлять до 10 ссылок на страницы вашего сайта. Хотите чтобы объявление стало более заметным и информативным? И в то же время оказало помощь потенциальному клиенту и сориентировало его на вашем сайте? Тогда добавление дополнительных ссылок — необходимый шаг для повышения эффективности вашей контекстной кампании. Но не стоит забывать и о фактической пользе для посетителя — если в объявлениях будут размещены ссылки на бесполезные для пользователя разделы сайта, то он просто тут же покинет ваш ресурс.</p>
-            <img src="images/plan.jpg" alt="">
-            <p>10 шагов по проверке эффективности кампании контекстной рекламы</p>
+            <p class="text">Одним из самых эффективных способов расширения объявлений являются, конечно же. дополнительные ссылки. Данная функция позволяет добавлять до 10 ссылок на страницы вашего сайта. Хотите чтобы объявление стало более заметным и информативным? И в то же время оказало помощь потенциальному клиенту и сориентировало его на вашем сайте? Тогда добавление дополнительных ссылок — необходимый шаг для повышения эффективности вашей контекстной кампании. Но не стоит забывать и о фактической пользе для посетителя — если в объявлениях будут размещены ссылки на бесполезные для пользователя разделы сайта, то он просто тут же покинет ваш ресурс.</p>
+            <img src="images/src/plan.jpg" alt="">
+            <p class="text__img">10 шагов по проверке эффективности кампании контекстной рекламы</p>
         </div>
 
         <section class="questions">
@@ -399,8 +417,12 @@
 
         </div>
     </main>
+
     
 
+
+    <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
     <script src="js/libs.min.js"></script>
     <script src="js/main.js"></script>
 </body>
