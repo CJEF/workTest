@@ -67,21 +67,6 @@ button {
     margin: 0 auto;
 }
 
-.main {
-    display: flex;
-}
-
-.main__sidebar {
-    width: 13%;
-    height: 100%;
-    background-color: $gray;
-    position: fixed;
-}
-
-.main__content {
-    padding-left: 15%;
-    padding-top: 65px;
-}
 
 .title-1 {
     font-size: 56px;

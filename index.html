@@ -12,6 +12,11 @@
     <!-- header -->
     <header class="header">
         <div class="header__inner">
+            <div class="burger">
+                <svg class="burger__icon">
+                    <use xlink:href="sprite.svg#burger"></use>
+                </svg>
+            </div>
             <a class="header__info">
                 <img class="header__info-phone" src="images/src/phone.svg" alt="">
                 <p class="header__info-text">Астана<strong>&nbsp;696-226</strong></p>
@@ -23,10 +28,8 @@
     </header>
     <!-- header -->
 
-    <main class="main">
 
-    <div class="main__sidebar">
-        <div class="sidebar">
+        <div class="sidebar" id="sidebar">
             <div class="sidebar__inner">
                 <a class="sidebar-link" href="#">
                     <svg class="sidebar__logo">
@@ -93,11 +96,9 @@
                 </a>
             </div>
         </div>
-        </div>
     </div>
     <!-- ../sidebar -->
 
-    <div class="main__content">
         <section class="top">
             <div class="container">
                 <div class="top__inner">
@@ -300,24 +301,28 @@
             </div>
         </section>
 
-        <!-- slider -->
+        <!-- slider --> 
 
-        <div class="slider">
-            <div class="slider__item">
-                <img src="images/src/slider-item.jpg" alt="">
+        <div class="container">
+            <div class="slider__inner">
+                <div class="slider">
+                    <div class="slider__item">
+                        <img src="images/src/slider-item.jpg" alt="">
+                    </div>
+                    <div class="slider__item">
+                        <img src="images/src/slider-item.jpg" alt="">
+                    </div>
+                    <div class="slider__item">
+                        <img src="images/src/slider-item.jpg" alt="">
+                    </div>
+                    <div class="slider__item">
+                        <img src="images/src/slider-item.jpg" alt="">
+                    </div>
+                    <!-- <div class="slider__buttons">
+                        button
+                    </div> -->
+                </div>
             </div>
-            <div class="slider__item">
-                <img src="images/src/slider-item.jpg" alt="">
-            </div>
-            <div class="slider__item">
-                <img src="images/src/slider-item.jpg" alt="">
-            </div>
-            <div class="slider__item">
-                <img src="images/src/slider-item.jpg" alt="">
-            </div>
-            <!-- <div class="slider__buttons">
-                button
-            </div> -->
         </div>
 
         <div class="container">
@@ -402,7 +407,7 @@
                 </ul>
             </div>
         </div>
-
+<!-- 
         <div class="tabs">
             <div class="container">
                 <div class="tabs__inner">
@@ -412,11 +417,9 @@
                     <div class="tab__item"></div>
                 </div>
             </div> 
-        </div>
+        </div> -->
 
 
-        </div>
-    </main>
 
     
 

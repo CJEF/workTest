@@ -10,7 +10,7 @@
     z-index: 100;
     &__inner{
         display: flex;
-        padding: 20px 0 22px 0;
+        padding: 20px 0 22px 50px;
         align-items: center;
     }
     &__info {
@@ -37,9 +37,28 @@
     }
 }
 
+.burger {
+    &__icon {
+        width: 30px;
+        height: 25px;
+        cursor: pointer;
+    }
+}
+
+.sidebar.active {
+    left: 0;
+}
+
 .sidebar {
+    min-width: 220px;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    background-color:$gray;
+    height: 100%;
     z-index: 100;
     color: #fff;
+    transition: all .5s;
     &__inner {
         padding: 70px 0;
     }
@@ -479,6 +498,7 @@
     &__item {
         max-width: 980px;
         border: 1px solid rgba(212, 212, 212, 0.45);
+        transition: all .3s
     }
     &__title {
         cursor: pointer;
@@ -489,16 +509,31 @@
         &:after {
             content: '';
             position: absolute;
-            top: 50%;
+            top: 40%;
             right: 3%;
-            transform: translate(-50%, -10%);
             background-image: url('../images/src/accordion-arrow.svg');
             width: 21px;
             height: 12px;
+            transition: all .3s;
+        }
+        &:hover {
+            box-shadow: 0 0 35px rgba(0, 0, 0, 0.14);
+            border-left: 4px solid #dc107e;
         }
     }
     &__text {
+        display: none;
         padding: 30px;
+    }
+    &__item.accordion__item--active .accordion__text{
+        display: block;
+    }
+    &__item.accordion__item--active .accordion__title::after{
+        transform: rotate(180deg);
+    }
+    &__item.accordion__item--active .accordion__title:hover{
+        border: none;
+        box-shadow: none;
     }
 }
 
@@ -506,6 +541,9 @@
     &__item {
         width: 980px;
         height: 399px;
+    }
+    &__inner {
+        padding: 50px 0;
     }
 }
 
