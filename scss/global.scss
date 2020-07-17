@@ -67,6 +67,15 @@ button {
     margin: 0 auto;
 }
 
+textarea {
+    resize: none;
+}
+
+input {
+    &:focus {
+        outline: none;
+    }
+}
 
 .title-1 {
     font-size: 56px;
