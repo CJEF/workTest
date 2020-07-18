@@ -88,6 +88,12 @@
         position: relative;
     }
 
+    &__menu-item:nth-child(2) {
+        .sidebar__menu-img {
+            height: 9px;
+        } 
+    }
+
     &__menu-item:nth-child(2)::after,
     &__menu-item:nth-child(6)::after {
         content: '';
@@ -1241,6 +1247,7 @@ input.form__wrap.questions__form-email::after {
             border-collapse: collapse;
             margin: 0 auto;
             border: 3px solid #dd1781;
+            position: relative;
 
             td {
                 border-right: 3px solid #e7e7e7;
@@ -1269,6 +1276,16 @@ input.form__wrap.questions__form-email::after {
             tbody {
                 color: #48444b;
                 font-size: 17px;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -3px;
+                    left: 0;
+                    width: 100.4%;
+                    height: 3px;
+                    background-color: $pink;
+                    z-index: 3;
+                }
             }
 
             th:first-child,
