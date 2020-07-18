@@ -102,10 +102,12 @@
     <!-- ../sidebar -->
 
     <div class="top__img">
-        <div class="top__img-inner">
-            <a class="top__link-first top-links"><span>Главная</span></a>
-            <a class="top__link-second top-links"><span>Блог</span></a>
-            <h2 class="top-title title-2">блог</h2>
+        <div class="container">
+            <div class="top__img-inner">
+                <a class="top__link-first top-links"><span>Главная</span></a>
+                <a class="top__link-second top-links"><span>Блог</span></a>
+                <h2 class="top-title title-2">блог</h2>
+            </div>
         </div>
     </div>
 
@@ -390,9 +392,17 @@
                 <p class="questions__text">или оставьте заявку и <span>мы свяжемся с вами</span></p>
                 <div class="form__wrapper">
                     <form class="questions__form">
-                        <input class="form-item questions__form-text" type="text" value="Иванов Сергей">
-                        <input class="form-item questions__form-number" value="+7 771 224 21 21" required>
-                        <input class="form-item questions__form-email" type="email" value="ivanov@mail.ru" required>
+                        <ul class="questions__form-list">
+                            <li class="questions__form-item-1">
+                                <input class="form-item questions__form-text" type="text" value="Иванов Сергей">
+                            </li>
+                            <li class="questions__form-item-2">
+                                <input class="form-item questions__form-number" value="+7 771 224 21 21" required>
+                            </li>
+                            <li class="questions__form-item-3">
+                                <input class="form-item questions__form-email" type="email" value="ivanov@mail.ru" required>
+                            </li>
+                        </ul>
                         <div class="questions__item-group">
                             <input class="input__form-checkbox" id="form-checkbox" type="checkbox">
                             <label class="form__checkbox-label" for="form-checkbox">Разрешаю обработку персональных
@@ -412,15 +422,21 @@
                 ваш проект</h2>
             <p class="form__text">продумаем и сделаем!</p>
             <form class="form-second">
-                <div class="form-left">
-                    <input value="Иванов Сергей" class="form-second__input-text" type="text" required>
-                    <input type="text" value="+7 771 224 21 21" required>
-                    <input type="email" value="ivanov@mail.ru" required>
-                </div>
+                <ul class="form__left">
+                    <li class="form__left-item-1">
+                        <input value="Иванов Сергей" class="form-second__input-text" type="text" required>
+                    </li>
+                    <li class="form__left-item-2">
+                        <input type="text" value="+7 771 224 21 21" required>
+                    </li>
+                    <li class="form__left-item-3">
+                        <input type="email" value="ivanov@mail.ru" required>
+                    </li>
+                </ul>
                 <div class="form-right">
                     <textarea class="form__textarea" placeholder="Сooбщение" required></textarea>
                 </div>
-
+    
             </form>
             <p class="form-second__text">Поля отмеченные звездочкой ( <span>*</span> ) , являются обязательными</p>
             <button class="form-second__button" type="submit">Отправить</button>
@@ -535,6 +551,38 @@
     </div>
     </div>
 
+    <div class="tabs-wrapper">
+        <div class="container">
+            <div class="tabs_wrap-2">
+                <ul class="tabs__base">
+                    <li class="tabs__base-item">
+                        <div class="tabs__base-div">Базовый</div>
+                    </li>
+                    <li class="tabs__base-item">
+                        <div class="tabs__base-div">Стандарт</div>
+                    </li>
+                    <li class="tabs__base-item">
+                        <div class="tabs__base-div">премиум</div>
+                    </li>
+                </ul>
+                <ul class="tabs__little">
+                    <li class="tabs__little-item">
+                        <div class="tabs__little-div">до 50</div>
+                    </li>
+                    <li class="tabs__little-item">
+                        <div class="tabs__little-div">до 100</div>
+                    </li>
+                    <li class="tabs__little-item">
+                        <div class="tabs__little-div">до 200</div>
+                    </li>
+                    <li class="tabs__little-item">
+                        <div class="tabs__little-div">до 600</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
 
     <div class="prompt">
         <div class="container">
@@ -584,33 +632,52 @@
         </div>
     </div>
 
-    <div class="dots"></div>
+    <div class="dots">
+        <div class="dots-wrap">
+            <div class="dots__inner">
+                <button class="dots__buttons-prev"></button>
+
+                <ul class="dots__list">
+                    <li class="dots__item"><span></span></li>
+                    <li class="dots__item"><span></span></li>
+                    <li class="dots__item"><span></span></li>
+                    <li class="dots__item"><span></span></li>
+                    <li class="dots__item"><span></span></li>
+                    <li class="dots__item"><span></span></li>
+                </ul>
+                
+                <button class="dots__buttons-next"></button>
+            </div>
+    </div>
+</div>
 
     <div class="instagram">
-        <div class="instagram__img">
-            <a href="#">
-                <img src="images/src/instagram.png" alt="">
-            </a>
-        </div>
-        <div class="instagram__gallery">
-            <div class="instagram__gallery-item">
-                <img src="images/src/Insta1.png" alt="">
+        <div class="container-2">
+            <div class="instagram__img">
+                <a href="#">
+                    <img src="images/src/instagram.png" alt="">
+                </a>
             </div>
-            <div class="instagram__gallery-item">
-                <img src="images/src/Insta2.png" alt="">
-            </div>
-            <div class="instagram__gallery-item">
-                <img src="images/src/Insta3.png" alt="">
-            </div>
-            <div class="instagram__gallery-item">
-                <img src="images/src/Insta4.png" alt="">
-            </div>
-            <div class="instagram__gallery-item">
-                <img src="images/src/Insta5.png" alt="">
-            </div>
-            <a href="#">
-                <img class="iphone" src="images/src/IPhoneX.png" alt="IPhoneX">
-            </a>
+            <ul class="instagram__gallery">
+                <li class="instagram__gallery-item">
+                    <img src="images/src/Insta1.png" alt="">
+                </li>
+                <li class="instagram__gallery-item">
+                    <img src="images/src/Insta2.png" alt="">
+                </li>
+                <li class="instagram__gallery-item">
+                    <img src="images/src/Insta3.png" alt="">
+                </li>
+                <li class="instagram__gallery-item">
+                    <img src="images/src/Insta4.png" alt="">
+                </li>
+                <li class="instagram__gallery-item">
+                    <img src="images/src/Insta5.png" alt="">
+                </li>
+                <a href="#">
+                    <img class="iphone" src="images/src/IPhoneX.png" alt="IPhoneX">
+                </a>
+            </ul>
         </div>
     </div>
 

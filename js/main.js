@@ -41,4 +41,21 @@ $(document).ready(function () {
     $('.tab-item').removeClass('active');
     $(this).parent().addClass("active");
   })
+
+  $('.tabs__base-div').click(function() {
+    $('.tabs__base-item').removeClass('active');
+    $(this).parent().addClass("active");
+  })
+
+  $('.tabs__little-div').click(function() {
+    $('.tabs__little-item').removeClass('active');
+    $(this).parent().addClass("active");
+  })
+  
+
+  // $('.questions__form-text').onFocus(function() {
+  //   if($(this) = $('.questions__form-item-2')) {
+
+  //   }
+  // })
 });

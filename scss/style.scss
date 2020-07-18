@@ -9,6 +9,10 @@
     width: 100%;
     z-index: 100;
 
+    .burger {
+        position: absolute;
+    }
+
     &__inner {
         display: flex;
         padding: 20px 0 22px 50px;
@@ -195,6 +199,7 @@
     background-image: url(../images/src/top.png);
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .top-links {
@@ -230,9 +235,9 @@
 }
 
 .top__img-inner {
-    padding: 70px 0 75px;
+    padding: 70px 0;
     position: relative;
-    padding-left: 17%;
+    margin-left: -100px;    
 }
 
 
@@ -834,6 +839,7 @@
             color: #212121;
             font-size: 17px;
             border: 1px solid #e6e6e6;
+            width: 100%;
 
             &:focus {
                 border: 1px solid #212121;
@@ -859,62 +865,55 @@
     }
 }
 
-.form__wrapper.questions__form-text::after {
+.questions__form-item-1,
+.questions__form-item-2,
+.questions__form-item-3 {
+    position: relative;
+}
+
+.questions__form .questions__form-item-1::after {
     content: "";
     width: 16px;
     height: 17px;
     position: absolute;
-    top: 50%;
-    right: 1%;
+    top: 20px;
+    right: 15px;
     transform: translateY(-50%);
     z-index: 1;
     background-image: url(../images/src/form-text.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    fill: #e6e6e6;
-
-    &:focus {
-        fill: #212121;
-    }
 }
 
-.form__wrapper.questions__form-number::after {
+.questions__form .questions__form-item-2::after {
     content: "";
+    width: 13px;
+    height: 15px;
     position: absolute;
-    top: 50%;
-    right: 1%;
+    top: 20px;
+    right: 15px;
     transform: translateY(-50%);
     z-index: 1;
     background-image: url(../images/src/form-number.svg);
-    fill: #e6e6e6;
-
-    &:focus {
-        fill: #212121;
-    }
+    background-repeat: no-repeat;
 }
 
-input.form__wrap.questions__form-email::after {
+.questions__form .questions__form-item-3::after {
     content: "";
+    width: 15px;
+    height: 15px;
     position: absolute;
-    top: 50%;
-    right: 1%;
+    top: 20px;
+    right: 15px;
     transform: translateY(-50%);
     z-index: 1;
     background-image: url(../images/src/form-email.svg);
-    width: 10px;
-    height: 10px;
-    fill: black;
-
-    &:focus {
-        fill: #212121;
-    }
+    background-repeat: no-repeat;
 }
 
 .form__checkbox-label {
     font-size: 14px;
     line-height: 16px;
     position: relative;
+    cursor: pointer;
 }
 
 .input__form-checkbox {
@@ -986,7 +985,7 @@ input.form__wrap.questions__form-email::after {
         justify-content: space-between;
     }
 
-    .form-left {
+    .form__left {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1002,6 +1001,43 @@ input.form__wrap.questions__form-email::after {
             &:focus {
                 opacity: 1;
             }
+        }
+
+        .form__left-item-1,
+        .form__left-item-2,
+        .form__left-item-3 {
+            position: relative;
+        }
+        .form__left-item-1:after {
+            content: "";
+            width: 16px;
+            height: 17px;
+            position: absolute;
+            top: 23px;
+            right: 15px;
+            transform: translateY(-50%);
+            background-image: url(../images/src/form-text.svg);
+        }
+        .form__left-item-2:after {
+            content: "";
+            width: 16px;
+            height: 17px;
+            position: absolute;
+            top: 23px;
+            right: 15px;
+            transform: translateY(-50%);
+            background-image: url(../images/src/form-number.svg);
+            background-repeat: no-repeat;
+        }
+        .form__left-item-3:after {
+            content: "";
+            width: 16px;
+            height: 17px;
+            position: absolute;
+            top: 23px;
+            right: 15px;
+            transform: translateY(-50%);
+            background-image: url(../images/src/form-email.svg);
         }
     }
 
@@ -1162,16 +1198,14 @@ input.form__wrap.questions__form-email::after {
     color: $gray;
 
     .tab-item {
-        padding: 19px 75px 12px;
         min-width: 260px;
         border-radius: 24px;
         cursor: pointer;
         transition: all .3s;
+    }
 
-        &:hover {
-            background-color: $pink;
-            color: #fff;
-        }
+    .tab {
+        padding:19px 75px 12px;
     }
 
     .tabs_wrap {
@@ -1199,6 +1233,50 @@ input.form__wrap.questions__form-email::after {
     .default-tab.active {
         background-color: $pink;
         color: #fff;
+    }
+}
+
+.tabs_wrap-2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tabs__base {
+    display: flex;
+    &-item {
+        background-color: #e7e7e7;
+        font-size: 15px;
+        text-transform: uppercase;
+        margin-right: 2px;
+        cursor: pointer;
+        transition: .3s;
+        &.active {
+            background-color: $pink;
+            color: #fff;
+        }
+    }
+    &-div {
+        padding: 19px 50px;
+    }
+}
+
+.tabs__little {
+    align-items: flex-end;
+    display: flex;
+    &-item {
+        background-color: #e7e7e7;
+        font-size: 14px;
+        text-transform: uppercase;
+        margin-right: 3px;
+        cursor: pointer;
+        transition: .3s;
+        &.active {
+            background-color: $pink;
+            color: #fff;
+        }
+    }
+    &-div {
+        padding: 9px 20px;
     }
 }
 
@@ -1310,8 +1388,98 @@ input.form__wrap.questions__form-email::after {
     }
 }
 
+.dots {
+    margin: 0 auto;
+    padding: 30px 0;
+    &__inner {
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        display: inline-flex;
+    }
+    &-wrap {
+        text-align: center;
+    }
+    &__list {
+        margin:0 40px;
+        counter-reset: dots;
+        display: inline-flex;
+        position: relative;
+        justify-content: center;
+    }
+    &__item {
+        cursor: pointer;
+        position: relative;
+        margin-right: 8px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        transition: .3s;
+        &:hover {
+        background-color: #e6eff8;
+        }
+        &:nth-child(5):before {
+            font-size: 0;
+        }
+        &:nth-child(5):after {
+            position: absolute;
+            content: '. . . .';
+            top: 22px;
+            left: 9px;
+            color: #3b91e6;
+        }
+        &:nth-child(6):before {
+            content: "10";
+            left: 13.5px;
+        }
+        &:last-child{
+        margin-right: 0;
+        }
+        &:before {
+            counter-increment: dots;
+            content: counter(dots);
+            position: absolute;
+            color: #3b91e6;
+            width: 15px;
+            height: 15px;
+            top: 12px;
+            left: 17px;
+        }
+        &:after {
+            position: absolute;
+            content: '. . .';
+            top: 22px;
+            left: 14px;
+            color: #3b91e6;
+        }
+    }
+    &__buttons-prev,
+    &__buttons-next {
+        width: 35px;
+        height: 35px;
+        background-color: $blue;
+        position: relative;
+        border-radius: 50%;
+    }
+    &__buttons-prev {
+        background-image: url(../images/src/slider-prev.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &__buttons-next {
+        background-image: url(../images/src/slider-next.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
 .instagram {
-    padding: 135px 120px;
+    padding: 135px 0;
+
+    .container-2 {
+        margin: 0 auto;
+        max-width: 1150px;
+    }
 
     &__img {
         text-align: center;
@@ -1327,7 +1495,7 @@ input.form__wrap.questions__form-email::after {
     .iphone {
         position: absolute;
         top: 35%;
-        right: 12%;
+        right: 4%;
         transform: translateY(-50%);
     }
 }
@@ -1345,8 +1513,6 @@ input.form__wrap.questions__form-email::after {
 
     &__copy {
         max-width: 220px;
-
-        &-text {}
     }
 
     &__social {
