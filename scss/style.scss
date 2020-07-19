@@ -192,10 +192,52 @@
         line-height: 24px;
     }
 }
+.top__img-section {
+    position: relative;
+}
+.top__img-section:before {
+    position: absolute;
+    content: '';
+    background-image: url(../images/src/top-circle-2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 80%;
+    z-index: 1;
+    opacity: 0.3;
+}
+.top__img:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, #b5446e 0%, #9d44b5 100%);
+    opacity: 0.38;
+}
+.top__img:after {
+    content: '';
+    background-image: url(../images/src/top-circle.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.6;
+    top: 0;
+    right: 25%;
+    position: absolute;
+    width: 193px;
+    height: 193px;
+}
 
 .top__img {
     position: relative;
-    padding: 57px 0 0;
+    padding: 67px 0 0;
     background-image: url(../images/src/top.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -227,8 +269,6 @@
     margin-right: 20px;
 }
 
-.top__link-second {}
-
 .top-title {
     color: #fff;
     text-transform: uppercase;
@@ -237,7 +277,8 @@
 .top__img-inner {
     padding: 70px 0;
     position: relative;
-    margin-left: -100px;    
+    margin-left: -100px;  
+    z-index: 2;  
 }
 
 
@@ -772,26 +813,37 @@
     background-size: cover;
     z-index: 5;
 
-    // &__wrapper::before{
-    //     content: "";
-    //     position: absolute;
-    //     width: 100%;
-    //     height: 100%;
-    //     top: 0;
-    //     left: 0;
-    //     z-index: 1;
-    //     background-image: url(../images/src/questions-background.png);
-    //     background-position: center;
-    //     background-repeat: no-repeat;
-    //     background-size: cover;
-    // }
+    &__wrapper-gradient {
+        position: relative;
+    }
+
+    &__wrapper-gradient::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url(../images/src/questions-background.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.39;
+        z-index: 1;
+    }
+    &__wrapper-inner {
+        z-index: 2;
+        position: relative;
+    }
     &__inner {
         max-width: 655px;
         padding: 97px 0 137px;
         margin: 0 auto;
         text-align: center;
         align-items: center;
-        z-index: 5;
+        z-index: 200;
     }
 
     &__title {
@@ -1099,7 +1151,6 @@
     }
 }
 
-
 .select_wrap {
     max-width: 280px;
     margin: 15px auto;
@@ -1162,6 +1213,65 @@
 
 .select {
     padding: 50px 0 300px;
+}
+
+.form-validator {
+    max-width: 390px;
+    padding: 0px 0 80px;
+    margin: 0 auto;
+    &__inner {
+        padding: 90px 50px 160px;
+        background-color: #f3f3f3;
+    }
+    &-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    input {
+        padding: 15px 40px 15px 15px;
+        min-width: 280px;
+    }
+    .right__input {
+        border-radius: 1px;
+border: 1px solid #e6e6e6;
+        margin-bottom: 20px;
+    }
+    .wrong__input {
+        border-radius: 1px;
+border: 1px solid #dc107e;
+    }
+    .wrong__input-item,
+    .right__input-item {
+        position: relative;
+    }
+    .wrong__input-item::before {
+        background-image: url(../images/src/wrong.png);
+        width: 14px;
+        height: 14px;
+        top: 25px;
+        transform: translateY(-50%);
+    }
+    .right__input-item::before {
+        background-image: url(../images/src/right.png);
+        width: 16px;
+        height: 13px;
+        top: 19px;
+    }
+    .wrong__input-item::before,
+    .right__input-item::before {
+        content: '';
+        right: 10px;
+        position: absolute;
+        background-repeat: no-repeat;
+    }
+    .wrong__input-item label {
+        color: $pink;
+        position: absolute;
+        bottom: -30px;
+        left: 0;
+    }
 }
 
 .alerts {

@@ -101,15 +101,17 @@
     </div>
     <!-- ../sidebar -->
 
-    <div class="top__img">
-        <div class="container">
-            <div class="top__img-inner">
-                <a class="top__link-first top-links"><span>Главная</span></a>
-                <a class="top__link-second top-links"><span>Блог</span></a>
-                <h2 class="top-title title-2">блог</h2>
+    <section class="top__img-section">
+        <div class="top__img">
+            <div class="container">
+                <div class="top__img-inner">
+                    <a class="top__link-first top-links"><span>Главная</span></a>
+                    <a class="top__link-second top-links"><span>Блог</span></a>
+                    <h2 class="top-title title-2">блог</h2>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <section class="top">
         <div class="container">
@@ -385,7 +387,8 @@
     </div>
 
     <section class="questions">
-        <div class="questions__wrapper">
+        <div class="questions__wrapper-gradient">
+        <div class="questions__wrapper-inner">
             <div class="questions__inner">
                 <h2 class="questions__title">Остались вопросы? Звоните специалистам!</h2>
                 <p class="questions__number">+7 7273<strong> 124 226</strong></p>
@@ -413,6 +416,7 @@
                     <button class="questions__button" type="submit">оставить заявку</button>
                 </div>
             </div>
+        </div>
         </div>
     </section>
 
@@ -480,6 +484,24 @@
                         </div>
                     </li>
                 </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-validator">
+        <div class="container">
+            <div class="form-validator__inner">
+                <form action="#" class="form-validator-item">
+                    <ul>
+                        <li class="right__input-item">
+                            <input class="right__input" type="text" value="+7 771 224 21 21" required>
+                        </li>
+                        <li class="wrong__input-item">
+                            <input class="wrong__input" type="email" value="ivanov" required>
+                            <label>введите правильно почту</label>
+                        </li>
+                    </ul>
+                </form>
             </div>
         </div>
     </div>
@@ -638,12 +660,12 @@
                 <button class="dots__buttons-prev"></button>
 
                 <ul class="dots__list">
-                    <li class="dots__item"><span></span></li>
-                    <li class="dots__item"><span></span></li>
-                    <li class="dots__item"><span></span></li>
-                    <li class="dots__item"><span></span></li>
-                    <li class="dots__item"><span></span></li>
-                    <li class="dots__item"><span></span></li>
+                    <li class="dots__item"></li>
+                    <li class="dots__item"></li>
+                    <li class="dots__item"></li>
+                    <li class="dots__item"></li>
+                    <li class="dots__item"></li>
+                    <li class="dots__item"></li>
                 </ul>
                 
                 <button class="dots__buttons-next"></button>
