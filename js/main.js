@@ -1,7 +1,16 @@
 $(document).ready(function () {
   $(".slider").slick({
     infinite: false,
-    dots: true
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 761,
+        settings: {
+          arrows: false,
+          dots: true
+        }
+      }
+    ]
   });
 
   $(".accordion__title").on("click", function () {
