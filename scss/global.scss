@@ -42,7 +42,6 @@ h6 {
 
 body {
     min-width: 320px;
-    overflow-x: hidden;
     position: relative;
     background-color: #fff;
     color: $gray;
@@ -61,11 +60,23 @@ button {
     }
 }
 
+img {
+    max-width: 100%;
+}
+
 .container {
     max-width: 1060px;
-    padding:0 20px;
+    padding:0 15px;
     margin: 0 auto;
 }
+
+.container-header,
+.container-footer {
+    max-width: 1700px;
+    padding:0 15px;
+    margin: 0 auto;
+}
+
 
 textarea {
     resize: none;
